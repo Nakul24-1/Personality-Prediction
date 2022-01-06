@@ -1,0 +1,357 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main class="content">
+
+        {% include 'includes/navigation.html' %}
+
+        <div class="row justify-content-md-center mt-4">
+        	
+            <!--div class="col-12 mb-4">
+                <div class="card bg-yellow-alt shadow-sm">
+                    <div class="card-header d-flex flex-row align-items-center flex-0">
+                        <div class="d-block">
+                            <div class="h5 font-weight-normal mb-2">Sales Value</div>
+                            <h2 class="h3">$10,567</h2>
+                            <div class="small mt-2"> 
+                                <span class="font-weight-bold mr-2">Yesterday</span>                              
+                                <span class="fas fa-angle-up text-success"></span>                                   
+                                <span class="text-success font-weight-bold">10.57%</span>
+                            </div>
+                        </div>
+                        <div class="d-flex ml-auto">
+                            <a href="#" class="btn btn-secondary text-dark btn-sm mr-2">Month</a>
+                            <a href="#" class="btn btn-primary btn-sm mr-3">Week</a>
+                        </div>
+                    </div>
+                    <div class="card-body p-2">
+                        <div class="ct-chart-sales-value ct-double-octave ct-series-g"></div>
+                    </div>
+                </div>
+            </div-->
+            <!--div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <div class="card border-light shadow-sm">
+                    <div class="card-body">
+                        <div class="row d-block d-xl-flex align-items-center">
+                            <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                                <div class="ct-chart-traffic-share ct-golden-section ct-series-a"></div>
+                            </div>
+                            <div class="col-12 col-xl-7 px-xl-0">
+                                <h2 class="h5 mb-3">Traffic Share</h2>
+                                <h6 class="font-weight-normal text-gray"><span class="icon w-20 icon-xs icon-secondary mr-1"><span class="fas fa-desktop"></span></span> Line 1 <a href="#" class="h6">60%</a></h6>
+                                <h6 class="font-weight-normal text-gray"><span class="icon w-20 icon-xs icon-primary mr-1"><span class="fas fa-mobile-alt"></span></span> Line 2 <a href="#" class="h6">30%</a></h6>
+                                <h6 class="font-weight-normal text-gray"><span class="icon w-20 icon-xs icon-tertiary mr-1"><span class="fas fa-tablet-alt"></span></span> Line 3 <a href="#" class="h6">10%</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <div class="card border-light shadow-sm">
+                    <div class="card-body">
+                        <div class="row d-block d-xl-flex align-items-center">
+                            <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                                <div class="icon icon-shape icon-md icon-shape-blue rounded mr-4 mr-sm-0"><span class="fas fa-chart-line"></span></div>
+                                <div class="d-sm-none">
+                                    <h2 class="h5">Customers</h2>
+                                    <h3 class="mb-1">345,678</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-7 px-xl-0">
+                                <div class="d-none d-sm-block">
+                                    <h2 class="h5">Customers</h2>
+                                    <h3 class="mb-1">Line 1</h3>
+                                </div>
+                                <small>Date, 2021 <span class="icon icon-small"><span class="fas fa-globe-europe"></span></span> WorldWide</small> 
+                                <div class="small mt-2">                               
+                                    <span class="fas fa-angle-up text-success"></span>                                   
+                                    <span class="text-success font-weight-bold">100%</span> Line 3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-4 mb-4">
+                <div class="card border-light shadow-sm">
+                    <div class="card-body">
+                        <div class="row d-block d-xl-flex align-items-center">
+                            <div class="col-12 col-xl-5 text-xl-center mb-3 mb-xl-0 d-flex align-items-center justify-content-xl-center">
+                                <div class="icon icon-shape icon-md icon-shape-secondary rounded mr-4"><span class="fas fa-cash-register"></span></div>
+                                <div class="d-sm-none">
+                                    <h2 class="h5">Revenue</h2>
+                                    <h3 class="mb-1">$43,594</h3>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-7 px-xl-0">
+                                <div class="d-none d-sm-block">
+                                    <h2 class="h5">Revenue</h2>
+                                    <h3 class="mb-1">Line 1</h3>
+                                </div>
+                                <small>Date, 2021 <span class="icon icon-small"><span class="fas fa-globe-europe"></span></span> Worldwide</small>
+                                <div class="small mt-2">                               
+                                    <span class="fas fa-angle-up text-success"></span>                                   
+                                    <span class="text-success font-weight-bold">100%</span> Line 3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div-->
+
+        <!-- <div class="row justify-content-md-center mt-1">
+            <div class="col-12 mb-4">
+         
+                <div class="card bg-white shadow-sm">
+                    <div class="card-header d-flex flex-row align-items-center flex-0">
+        
+                                <canvas id="myChart"></canvas>
+                                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+                                <script type="text/javascript">
+                                    Chart.Legend.prototype.afterFit = function() {
+                                        this.height = this.height + 15;
+                                    };
+                                    Chart.defaults.global.defaultFontSize = 14;
+                                    var ctx = document.getElementById('myChart').getContext('2d');
+                                    var chart = new Chart(ctx, {
+                                    // The type of chart we want to create
+                                    type: 'bar',
+
+                                    // The data for our dataset
+                                    data: {
+                                        labels: ['Neuroticism','Agreebleness' , 'Conscientiousness', 'Extraversion', 'Openness'],
+                                        datasets: [{
+                                            label: 'Personality Score for {{ current_user.username }}', 
+                                            backgroundColor: 'rgb(255, 99, 132)',
+                                            borderColor: 'rgb(255, 99, 132)',
+                                            data: {{values}}
+                                        }]
+                                    },
+
+                                    // Configuration options go here
+                                    // options: {}
+                                    
+                                    options: {
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    //beginAtZero: true,
+                                                    min: 0,
+                                                    max: 1,
+                                                    stepSize: 0.1
+                                                        }
+                                                    }]
+                                                }
+                                            }
+                                    });
+                                 </script>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div> -->
+
+        <div class="row justify-content-md-center mt-1">
+            <div class="col-12 mb-4">
+            <!--h1> {{values}} </h1-->
+                <div class="card bg-white shadow-sm">
+                    <div class="card-header d-flex flex-row align-items-center flex-0">
+        
+                                <canvas id="myChart2"></canvas>
+                                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+                                <script type="text/javascript">
+                                    Chart.Legend.prototype.afterFit = function() {
+                                        this.height = this.height + 15;
+                                    };
+                                    Chart.defaults.global.defaultFontSize = 14;
+                                    Chart.helpers.drawRoundedTopRectangle = function(ctx, x, y, width, height, radius) {
+									  ctx.beginPath();
+									  ctx.moveTo(x + radius, y);
+									  // top right corner
+									  ctx.lineTo(x + width - radius, y);
+									  ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+									  // bottom right	corner
+									  ctx.lineTo(x + width, y + height);
+									  // bottom left corner
+									  ctx.lineTo(x, y + height);
+									  // top left	
+									  ctx.lineTo(x, y + radius);
+									  ctx.quadraticCurveTo(x, y, x + radius, y);
+									  ctx.closePath();
+									};
+									Chart.helpers.merge(Chart.defaults.global, {
+									    datasets: {
+									        roundedBar: {
+									            categoryPercentage: 0.8,
+									            barPercentage: 0.9
+									        }
+									    }
+									});
+
+									Chart.elements.RoundedTopRectangle = Chart.elements.Rectangle.extend({
+									  draw: function() {
+									    var ctx = this._chart.ctx;
+									    var vm = this._view;
+									    var left, right, top, bottom, signX, signY, borderSkipped;
+									    var borderWidth = vm.borderWidth;
+
+									    if (!vm.horizontal) {
+									      // bar
+									      left = vm.x - vm.width / 2;
+									      right = vm.x + vm.width / 2;
+									      top = vm.y;
+									      bottom = vm.base;
+									      signX = 1;
+									      signY = bottom > top? 1: -1;
+									      borderSkipped = vm.borderSkipped || 'bottom';
+									    } else {
+									      // horizontal bar
+									      left = vm.base;
+									      right = vm.x;
+									      top = vm.y - vm.height / 2;
+									      bottom = vm.y + vm.height / 2;
+									      signX = right > left? 1: -1;
+									      signY = 1;
+									      borderSkipped = vm.borderSkipped || 'left';
+									    }
+
+									    // Canvas doesn't allow us to stroke inside the width so we can
+									    // adjust the sizes to fit if we're setting a stroke on the line
+									    if (borderWidth) {
+									      // borderWidth shold be less than bar width and bar height.
+									      var barSize = Math.min(Math.abs(left - right), Math.abs(top - bottom));
+									      borderWidth = borderWidth > barSize? barSize: borderWidth;
+									      var halfStroke = borderWidth / 2;
+									      // Adjust borderWidth when bar top position is near vm.base(zero).
+									      var borderLeft = left + (borderSkipped !== 'left'? halfStroke * signX: 0);
+									      var borderRight = right + (borderSkipped !== 'right'? -halfStroke * signX: 0);
+									      var borderTop = top + (borderSkipped !== 'top'? halfStroke * signY: 0);
+									      var borderBottom = bottom + (borderSkipped !== 'bottom'? -halfStroke * signY: 0);
+									      // not become a vertical line?
+									      if (borderLeft !== borderRight) {
+									        top = borderTop;
+									        bottom = borderBottom;
+									      }
+									      // not become a horizontal line?
+									      if (borderTop !== borderBottom) {
+									        left = borderLeft;
+									        right = borderRight;
+									      }
+									    }
+
+									    // calculate the bar width and roundess
+									    var barWidth = Math.abs(left - right);
+									    var roundness = this._chart.config.options.barRoundness || 0.5;
+									    var radius = barWidth * roundness * 0.5;
+									    
+									    // keep track of the original top of the bar
+									    var prevTop = top;
+									    
+									    // move the top down so there is room to draw the rounded top
+									    top = prevTop + radius;
+									    var barRadius = top - prevTop;
+
+									    ctx.beginPath();
+									    ctx.fillStyle = vm.backgroundColor;
+									    ctx.strokeStyle = vm.borderColor;
+									    ctx.lineWidth = borderWidth;
+
+									    // draw the rounded top rectangle
+									    Chart.helpers.drawRoundedTopRectangle(ctx, left, (top - barRadius + 1), barWidth, bottom - prevTop, barRadius);
+
+									    ctx.fill();
+									    if (borderWidth) {
+									      ctx.stroke();
+									    }
+
+									    // restore the original top value so tooltips and scales still work
+									    top = prevTop;
+									  },
+									});
+
+									Chart.defaults.roundedBar = Chart.helpers.clone(Chart.defaults.bar);
+
+									Chart.controllers.roundedBar = Chart.controllers.bar.extend({
+									  dataElementType: Chart.elements.RoundedTopRectangle
+									});
+
+
+
+                                    var ctx = document.getElementById('myChart2').getContext('2d');
+                                    var chart = new Chart(ctx, {
+                                    // The type of chart we want to create
+                                    type: 'roundedBar',
+
+                                    // The data for our dataset
+                                    data: {
+                                        labels: ['Neuroticism','Agreebleness' , 'Conscientiousness', 'Extraversion', 'Openness'],
+                                            datasets: [{
+													      label: 'Text',
+													      backgroundColor: 'rgb(30,144,255)',
+													      borderColor: 'rgb(30,144,255)',
+													      data: {{values}}										
+													      
+													    },
+													    {
+													       label: 'Audio/Video',
+													       backgroundColor: 'rgb(0,191,255)',
+													       borderColor: 'rgb(0,191,255)',
+													       data: {{values2}}
+													     }
+													    ]
+													  },
+
+                                    // Configuration options go here
+                                    // options: {}
+                                    
+                                    options: {
+                                    	responsive:true,
+                                    	barRoundness: 1,
+                                    	title: {
+										      display: true,
+										      text: "Personality Score for {{ current_user.username }}"
+										    },
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    //beginAtZero: true,
+                                                    min: 0,
+                                                    max: 1,
+                                                    stepSize: 0.1
+                                                        }
+                                                    }]
+                                                }
+                                            }
+                                    });
+                                 </script>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        </div>
+
+
+        {% include 'includes/footer.html' %}
+
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
